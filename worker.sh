@@ -30,7 +30,7 @@ curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key \
 echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /' \
 |  tee /etc/apt/sources.list.d/kubernetes.list
 apt-get update
-apt-get install -y kubeadm=1.28.1-1.1 kubelet=1.28.1-1.1 kubectl=1.28.1-1.1
+apt-get install -y kubeadm=1.32.1-1.1 kubelet=1.32.1-1.1 kubectl=1.32.1-1.1
 apt-mark hold kubeadm kubelet kubectl
 #change ip address of control plane before this command!!!
 cat >> /etc/hosts << EOF
