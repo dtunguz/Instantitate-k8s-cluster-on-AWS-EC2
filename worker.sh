@@ -38,7 +38,7 @@ cat >> /etc/hosts << EOF
 EOF
 
 #changing parameters ip address, token, ca-cert-hash and control plane certificate key
-kubeadm join <master_ip_address>:6443 --token <token>  --discovery-token-ca-cert-hash sha256:3421bc8ecf7610dee2c3c5c1a819dee3587ac713e0e199474a542ba93c1abcf3 --control-plane --certificate-key 4fe7684f09b4d686d4cf7ae1842f477a73434779b2075bd9ce15fd289160bcc4 --ignore-preflight-errors=all
+kubeadm join k8scp:6443 --token <token>  --discovery-token-ca-cert-hash sha256:3421bc8ecf7610dee2c3c5c1a819dee3587ac713e0e199474a542ba93c1abcf3 --control-plane --certificate-key 4fe7684f09b4d686d4cf7ae1842f477a73434779b2075bd9ce15fd289160bcc4 --ignore-preflight-errors=all
 
 sudo systemctl restart kubelet
 
